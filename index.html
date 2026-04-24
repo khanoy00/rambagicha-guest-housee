@@ -5,119 +5,199 @@
 <title>Rambagicha Guest House</title>
 
 <style>
-body{margin:0;font-family:Arial;background:#f5f5f5;scroll-behavior:smooth}
+body{
+margin:0;
+font-family:system-ui,-apple-system;
+background:#f3f4f6;
+}
 
 /* HEADER */
-header{
-background:black;color:white;padding:15px;text-align:center;font-size:22px;font-weight:bold;
-position:sticky;top:0;
+.top{
+background:#fff;
+padding:18px;
+display:flex;
+align-items:center;
+gap:15px;
 }
 
-/* NAV */
-nav{
-display:flex;justify-content:space-around;background:#111;padding:10px;
-}
-nav a{color:white;text-decoration:none;font-size:14px}
-
-/* HERO */
-.hero{
-height:70vh;
-background:url('hero1.jpg') center/cover;
-display:flex;flex-direction:column;justify-content:center;align-items:center;
-color:white;text-align:center;
-}
-.btn{
-padding:12px 20px;margin:6px;border-radius:30px;color:white;text-decoration:none;
-}
-.call{background:#3b82f6;}
-.whatsapp{background:#22c55e;}
-.book{background:black;font-size:14px}
-
-/* ROOM */
-.room{
-background:white;margin:15px;border-radius:20px;padding:15px;
-box-shadow:0 5px 10px rgba(0,0,0,0.1);
-}
-.room img{width:100%;border-radius:15px;}
-
-.room h3{text-align:center;margin:10px 0;}
-.price{text-align:center;font-size:20px;font-weight:bold;margin-bottom:10px;}
-
-.features{
-display:flex;justify-content:space-around;font-size:14px;color:#555;
-margin-bottom:15px;
+.logo{
+width:65px;
+height:65px;
+border-radius:50%;
+background:linear-gradient(135deg,#3b82f6,#1e40af);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:28px;
+font-weight:bold;
 }
 
-/* BUTTON ROW */
-.row-btn{
+.title{
+font-size:20px;
+font-weight:600;
+color:#111;
+line-height:1.2;
+}
+
+/* BUTTONS */
+.btns{
 display:flex;
 gap:10px;
+padding:10px 15px;
+background:#fff;
 }
-.row-btn a{
+
+.btn{
 flex:1;
 text-align:center;
 padding:12px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-size:14px;
+font-weight:500;
+}
+
+.call{background:#3b82f6;}
+.wa{background:#16a34a;}
+
+/* NAV */
+nav{
+background:#111;
+display:flex;
+justify-content:space-around;
+padding:10px;
+}
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:14px;
+}
+
+/* ROOMS */
+.room{
+background:#fff;
+margin:15px;
+border-radius:18px;
+padding:15px;
+}
+
+.room img{
+width:100%;
+border-radius:12px;
+}
+
+.room h3{
+text-align:center;
+margin:10px 0;
+font-weight:600;
+}
+
+.price{
+text-align:center;
+font-size:18px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.features{
+display:flex;
+justify-content:space-around;
+font-size:14px;
+color:#444;
+margin-bottom:10px;
+}
+
+/* BUTTON ROW */
+.row{
+display:flex;
+gap:10px;
+}
+
+.row a{
+flex:1;
+text-align:center;
+padding:10px;
 border-radius:25px;
 color:white;
 text-decoration:none;
+font-size:14px;
 }
 
-/* BOOK SMALL */
-.book-small{
+/* BOOK */
+.book{
 display:block;
 text-align:center;
 margin-top:10px;
-font-size:13px;
+background:#000;
 color:white;
-background:black;
 padding:10px;
 border-radius:20px;
+font-size:13px;
 text-decoration:none;
 }
 
-/* CARD */
+/* GALLERY */
 .card{
-background:white;margin:15px;border-radius:20px;padding:20px;
+background:#fff;
+margin:15px;
+padding:20px;
+border-radius:18px;
 }
 
-/* GALLERY (VERTICAL) */
 .gallery img{
 width:100%;
-margin-bottom:15px;
-border-radius:15px;
+margin-bottom:12px;
+border-radius:12px;
 }
 
 /* FLOAT */
 .float{
-position:fixed;right:15px;bottom:20px;
-display:flex;flex-direction:column;gap:10px;
+position:fixed;
+right:15px;
+bottom:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
 }
+
 .float a{
-width:55px;height:55px;border-radius:50%;
-display:flex;align-items:center;justify-content:center;
-color:white;font-size:20px;text-decoration:none;
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:20px;
+text-decoration:none;
 }
 </style>
 
 </head>
 <body>
 
-<header>Rambagicha Guest House</header>
+<!-- HEADER -->
+<div class="top">
+<div class="logo">R</div>
+<div class="title">
+The Rambagicha<br>Guest House
+</div>
+</div>
 
+<div class="btns">
+<a href="tel:918796085868" class="btn call">📞 Call Now</a>
+<a href="https://wa.me/918796085868" class="btn wa">💬 Whatsapp</a>
+</div>
+
+<!-- NAV -->
 <nav>
 <a href="#">Home</a>
 <a href="#rooms">Rooms</a>
 <a href="#gallery">Gallery</a>
-<a href="#about">About</a>
 <a href="#faq">FAQ</a>
 </nav>
-
-<!-- HERO -->
-<div class="hero">
-<h1>Welcome to Rambagicha</h1>
-<a href="tel:918796085868" class="btn call">Call Now</a>
-<a href="https://wa.me/918796085868" class="btn whatsapp">Whatsapp</a>
-</div>
 
 <!-- ROOMS -->
 <div id="rooms">
@@ -134,13 +214,12 @@ color:white;font-size:20px;text-decoration:none;
 <span>❄️ Non AC</span>
 </div>
 
-<div class="row-btn">
+<div class="row">
 <a href="tel:918796085868" class="call">Call Now</a>
-<a href="https://wa.me/918796085868" class="whatsapp">Whatsapp</a>
+<a href="https://wa.me/918796085868" class="wa">Whatsapp</a>
 </div>
 
-<a href="#" onclick="bookNow('Non AC Room')" class="book-small">book now</a>
-
+<a href="#" onclick="book('Non AC Room')" class="book">book now</a>
 </div>
 
 <div class="room">
@@ -155,13 +234,12 @@ color:white;font-size:20px;text-decoration:none;
 <span>❄️ AC</span>
 </div>
 
-<div class="row-btn">
+<div class="row">
 <a href="tel:918796085868" class="call">Call Now</a>
-<a href="https://wa.me/918796085868" class="whatsapp">Whatsapp</a>
+<a href="https://wa.me/918796085868" class="wa">Whatsapp</a>
 </div>
 
-<a href="#" onclick="bookNow('AC Room')" class="book-small">book now</a>
-
+<a href="#" onclick="book('AC Room')" class="book">book now</a>
 </div>
 
 </div>
@@ -176,34 +254,26 @@ color:white;font-size:20px;text-decoration:none;
 <img src="g3.jpg">
 <img src="g4.jpg">
 </div>
-
-</div>
-
-<!-- ABOUT -->
-<div class="card" id="about">
-<h2 style="text-align:center;">About Rambagicha</h2>
-<p style="text-align:center;">
-Comfortable stay near temple for families and pilgrims.
-</p>
 </div>
 
 <!-- FAQ -->
 <div class="card" id="faq">
 <h2 style="text-align:center;">FAQ's</h2>
-<p>Check-in 12 PM, Check-out 11 AM</p>
-<p>Parking available</p>
+<p>Check-in 12 PM | Check-out 11 AM</p>
+<p>Parking Available</p>
+<p>WiFi Available</p>
 </div>
 
 <!-- FLOAT -->
 <div class="float">
 <a href="tel:918796085868" class="call">📞</a>
-<a href="https://wa.me/918796085868" class="whatsapp">💬</a>
+<a href="https://wa.me/918796085868" class="wa">💬</a>
 </div>
 
 <script>
-function bookNow(room){
+function book(room){
 let name=prompt("Enter your name");
-let msg=`Hello, I want to book ${room} Name:${name}`;
+let msg=`Hello, I want to book ${room}. Name: ${name}`;
 window.open("https://wa.me/918796085868?text="+encodeURIComponent(msg));
 }
 </script>

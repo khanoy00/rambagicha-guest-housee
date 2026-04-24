@@ -1,102 +1,60 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
-<title>Rambagicha Guest House</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rambagicha Guest House</title><style>
 body{margin:0;font-family:Arial;background:#f5f5f5}
 
 /* HEADER */
-.header{
-display:flex;
-align-items:center;
+header{
+background:black;
+color:white;
 padding:15px;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+text-align:center;
+font-size:22px;
+font-weight:bold;
 }
 
-.logo{
-width:50px;height:50px;
-border-radius:50%;
-background:#3b82f6;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:24px;
-margin-right:10px;
-}
-
-.top-btn{
-display:inline-block;
-padding:10px 20px;
-border-radius:30px;
-color:white;
-text-decoration:none;
-margin:5px;
-}
-
-.call{background:#3b82f6;}
-.whatsapp{background:#25D366;}
-
-/* HERO */
+/* HERO SLIDER */
 .hero{
-height:100vh;
+height:80vh;
 background-size:cover;
 background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
+flex-direction:column;
 color:white;
+text-align:center;
+transition:1s;
 }
 
-.overlay{
-background:rgba(0,0,0,0.6);
-padding:20px;
-border-radius:10px;
+.hero h1{font-size:32px;margin:0}
+.hero p{font-size:16px;margin:10px 20px}
+
+/* BUTTONS */
+.btn{
+display:inline-block;
+padding:12px 20px;
+margin:10px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* ROOMS */
-.rooms{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-padding:15px;
-}
+.call{background:#3b82f6;}
+.whatsapp{background:#22c55e;}
 
-.room{
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-}
-
-.room img{
-width:100%;
-height:180px;
-object-fit:cover;
-}
-
-.room h3{text-align:center;margin:10px}
-.price{text-align:center;font-size:18px;font-weight:bold}
-
-.features{
-display:flex;
-justify-content:space-around;
-font-size:14px;
-margin:10px 0;
-}
-
-/* FLOAT BUTTON */
+/* FLOAT BUTTONS */
 .float{
 position:fixed;
+right:15px;
 bottom:20px;
-right:20px;
 display:flex;
 flex-direction:column;
 gap:10px;
+z-index:1000;
 }
 
 .float a{
@@ -111,110 +69,118 @@ font-size:22px;
 text-decoration:none;
 }
 
-.call-f{background:#3b82f6;}
-.whatsapp-f{background:#25D366;}
-</style>
-</head>
+.float .call{background:#3b82f6;}
+.float .whatsapp{background:#22c55e;}
 
-<body>
+/* ROOMS */
+.rooms{
+display:grid;
+grid-template-columns:1fr;
+padding:10px;
+}
 
-<!-- HEADER -->
-<div class="header">
-<div class="logo">R</div>
-<div>
-<h3 style="margin:0">The Rambagicha Guest House</h3>
-<a href="tel:91879608586" class="top-btn call">Call Now</a>
-<a href="https://wa.me/91879608586" class="top-btn whatsapp">Whatsapp</a>
-</div>
-</div>
+.room{
+background:#f1efec;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+padding-bottom:20px;
+margin:10px;
+}
 
-<!-- HERO -->
-<div class="hero" id="hero">
-<div class="overlay">
-<h1>Welcome to Rambagicha Guest House</h1>
-<p>Experience luxury and comfort in the heart of the city</p>
-<p>Discover our premium accommodations, world-class amenities, and exceptional service</p>
+.room img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-top-left-radius:25px;
+border-top-right-radius:25px;
+}
 
-<a href="tel:91879608586" class="top-btn call">Call Now</a>
-<a href="https://wa.me/91879608586" class="top-btn whatsapp">Whatsapp</a>
-</div>
-</div>
+.room h3{
+text-align:center;
+margin:15px 0 5px;
+font-size:20px;
+font-weight:600;
+}
 
-<!-- ROOMS -->
-<div class="rooms">
+.price{
+text-align:center;
+font-size:22px;
+font-weight:bold;
+margin-bottom:10px;
+}
 
-<div class="room">
+.features{
+display:flex;
+justify-content:space-around;
+font-size:15px;
+margin:15px 0;
+color:#555;
+}
+
+.room-buttons{
+display:flex;
+gap:10px;
+padding:0 15px;
+}
+
+.room-buttons a{
+flex:1;
+text-align:center;
+padding:12px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:20px;
+}
+</style></head><body><header>Rambagicha Guest House</header><!-- HERO --><div class="hero" id="hero">
+<h1>Welcome to Rambagicha</h1>
+<p>Comfort stay near temple</p><a href="tel:91879608586" class="btn call">Call Now</a>
+<a href="https://wa.me/91879608586" class="btn whatsapp">Whatsapp</a>
+
+</div><!-- ROOMS --><div class="rooms"><!-- ROOM 1 --><div class="room">
 <img src="room1.jpg">
 <h3>Non AC Room 2 Bed</h3>
-<div class="price">1350/night</div>
-<div class="features">📶 Wifi 🔒 Locker 🚗 Parking</div>
-<a href="tel:91879608586" class="top-btn call">Call Now</a>
-<a href="https://wa.me/91879608586" class="top-btn whatsapp">Whatsapp</a>
+<div class="price">1350/night</div><div class="features">
+<span>Wifi</span>
+<span>Locker</span>
+<span>Parking</span>
+<span>Non AC</span>
+</div><div class="room-buttons">
+<a href="tel:91879608586" class="call">Call Now</a>
+<a href="https://wa.me/91879608586" class="whatsapp">Whatsapp</a>
 </div>
-
-<div class="room">
+</div><!-- ROOM 2 --><div class="room">
 <img src="room2.jpg">
 <h3>AC Room 2 Bed</h3>
-<div class="price">1750/night</div>
-<div class="features">📶 Wifi 🔒 Locker 🚗 Parking</div>
-<a href="tel:91879608586" class="top-btn call">Call Now</a>
-<a href="https://wa.me/91879608586" class="top-btn whatsapp">Whatsapp</a>
+<div class="price">1750/night</div><div class="features">
+<span>Wifi</span>
+<span>Locker</span>
+<span>Parking</span>
+<span>AC</span>
+</div><div class="room-buttons">
+<a href="tel:91879608586" class="call">Call Now</a>
+<a href="https://wa.me/91879608586" class="whatsapp">Whatsapp</a>
 </div>
+</div></div><!-- FLOAT BUTTON --><div class="float">
+<a href="tel:91879608586" class="call">📞</a>
+<a href="https://wa.me/91879608586" class="whatsapp">💬</a>
+</div><footer>© Rambagicha Guest House</footer><script>
+let images=["hero1.jpg","hero2.jpg"];
+let i=0;
 
-<div class="room">
-<img src="room3.jpg">
-<h3>Family Room</h3>
-<div class="price">2200/night</div>
-<div class="features">📶 Wifi 🔒 Locker 🚗 Parking</div>
-<a href="tel:91879608586" class="top-btn call">Call Now</a>
-<a href="https://wa.me/91879608586" class="top-btn whatsapp">Whatsapp</a>
-</div>
-
-<div class="room">
-<img src="room4.jpg">
-<h3>Deluxe Room</h3>
-<div class="price">2000/night</div>
-<div class="features">📶 Wifi 🔒 Locker 🚗 Parking</div>
-<a href="tel:91879608586" class="top-btn call">Call Now</a>
-<a href="https://wa.me/91879608586" class="top-btn whatsapp">Whatsapp</a>
-</div>
-
-<div class="room">
-<img src="room5.jpg">
-<h3>Premium Room</h3>
-<div class="price">2500/night</div>
-<div class="features">📶 Wifi 🔒 Locker 🚗 Parking</div>
-<a href="tel:91879608586" class="top-btn call">Call Now</a>
-<a href="https://wa.me/91879608586" class="top-btn whatsapp">Whatsapp</a>
-</div>
-
-<div class="room">
-<img src="room6.jpg">
-<h3>Luxury Room</h3>
-<div class="price">3000/night</div>
-<div class="features">📶 Wifi 🔒 Locker 🚗 Parking</div>
-<a href="tel:91879608586" class="top-btn call">Call Now</a>
-<a href="https://wa.me/91879608586" class="top-btn whatsapp">Whatsapp</a>
-</div>
-
-</div>
-
-<!-- FLOAT -->
-<div class="float">
-<a href="tel:91879608586" class="call-f">📞</a>
-<a href="https://wa.me/91879608586" class="whatsapp-f">💬</a>
-</div>
-
-<!-- SLIDER -->
-<script>
-let images = ["hero1.jpg","hero2.jpg"];
-let i = 0;
-
-setInterval(() => {
-document.getElementById("hero").style.backgroundImage = "url('" + images[i] + "')";
-i = (i + 1) % images.length;
-}, 3000);
-</script>
-
-</body>
+setInterval(()=>{
+document.getElementById("hero").style.backgroundImage="url("+images[i]+")";
+i=(i+1)%images.length;
+},3000);
+</script></body>
 </html>

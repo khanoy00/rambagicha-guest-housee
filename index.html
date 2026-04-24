@@ -192,49 +192,74 @@ The Rambagicha<br>Guest House
 </div>
 
 <!-- NAV -->
-  <!-- HERO SECTION START -->
-<div style="
-background:url('https://images.unsplash.com/photo-1609947017136-9daf32a5eb16') center/cover;
-height:300px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-position:relative;
-">
+  <<!-- HERO SLIDER -->
+<div style="position:relative;height:300px;overflow:hidden;">
 
+<!-- IMAGE 1 -->
+<img id="slide1" src="https://images.unsplash.com/photo-1597047084897-51e81819a499"
+style="width:100%;height:300px;object-fit:cover;position:absolute;opacity:1;transition:1s;">
+
+<!-- IMAGE 2 -->
+<img id="slide2" src="hero2.jpg"
+style="width:100%;height:300px;object-fit:cover;position:absolute;opacity:0;transition:1s;">
+
+<!-- DARK OVERLAY -->
 <div style="
 position:absolute;
 top:0;left:0;right:0;bottom:0;
 background:rgba(0,0,0,0.4);
 "></div>
 
-<h1 style="z-index:2;font-size:22px;margin-bottom:10px;">
-Welcome to Rambagicha
-</h1>
+<!-- TEXT + BUTTON -->
+<div style="
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:white;
+">
 
-<div style="z-index:2;display:flex;gap:10px;">
+<h1>Welcome to Rambagicha</h1>
+
 <a href="tel:+919671398234" style="
 background:#3b82f6;
-padding:10px 18px;
+padding:10px 20px;
 border-radius:25px;
 color:white;
 text-decoration:none;
+margin:5px;
+display:inline-block;
 ">Call Now</a>
 
 <a href="https://wa.me/919671398234" style="
 background:#16a34a;
-padding:10px 18px;
+padding:10px 20px;
 border-radius:25px;
 color:white;
 text-decoration:none;
+margin:5px;
+display:inline-block;
 ">Whatsapp</a>
-</div>
 
 </div>
-<!-- HERO SECTION END -->
+</div>
+
+<!-- SLIDER SCRIPT -->
+<script>
+let s1 = document.getElementById("slide1");
+let s2 = document.getElementById("slide2");
+
+setInterval(()=>{
+  if(s1.style.opacity == "1"){
+    s1.style.opacity = "0";
+    s2.style.opacity = "1";
+  } else {
+    s1.style.opacity = "1";
+    s2.style.opacity = "0";
+  }
+},3000);
+</script>
 <nav>
 <a href="#">Home</a>
 <a href="#rooms">Rooms</a>

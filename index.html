@@ -10,102 +10,96 @@ body{margin:0;font-family:Arial;background:#f5f5f5;scroll-behavior:smooth}
 /* HEADER */
 header{
 background:black;color:white;padding:15px;text-align:center;font-size:22px;font-weight:bold;
-position:sticky;top:0;z-index:1000;
+position:sticky;top:0;
 }
 
 /* NAV */
 nav{
 display:flex;justify-content:space-around;background:#111;padding:10px;
 }
-nav a{
-color:white;text-decoration:none;font-size:14px;
-}
+nav a{color:white;text-decoration:none;font-size:14px}
 
 /* HERO */
 .hero{
-height:80vh;
+height:70vh;
 background:url('hero1.jpg') center/cover;
 display:flex;flex-direction:column;justify-content:center;align-items:center;
 color:white;text-align:center;
 }
 .btn{
-padding:12px 20px;margin:8px;border-radius:30px;color:white;text-decoration:none;font-weight:bold;
+padding:12px 20px;margin:6px;border-radius:30px;color:white;text-decoration:none;
 }
 .call{background:#3b82f6;}
 .whatsapp{background:#22c55e;}
-.book{background:#000;}
+.book{background:black;font-size:14px}
 
-/* ROOMS */
+/* ROOM */
 .room{
-background:#f1efec;margin:15px;border-radius:20px;padding-bottom:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+background:white;margin:15px;border-radius:20px;padding:15px;
+box-shadow:0 5px 10px rgba(0,0,0,0.1);
 }
-.room img{width:100%;border-radius:20px 20px 0 0;}
-.room h3{text-align:center;}
-.price{text-align:center;font-size:20px;font-weight:bold;}
+.room img{width:100%;border-radius:15px;}
+
+.room h3{text-align:center;margin:10px 0;}
+.price{text-align:center;font-size:20px;font-weight:bold;margin-bottom:10px;}
 
 .features{
-display:flex;justify-content:space-around;margin:10px 0;font-size:14px;
-}
-
-.room-buttons{
-display:flex;flex-direction:column;gap:8px;padding:0 15px;
-}
-.room-buttons a{
-text-align:center;padding:12px;border-radius:30px;color:white;text-decoration:none;
-}
-
-/* CARD STYLE */
-.card{
-background:white;margin:15px;border-radius:20px;padding:20px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-.card h2{
-text-align:center;
-border-bottom:1px solid #ccc;
-padding-bottom:10px;
+display:flex;justify-content:space-around;font-size:14px;color:#555;
 margin-bottom:15px;
 }
-.card li{
-margin:12px 0;
-list-style:none;
-font-size:16px;
+
+/* BUTTON ROW */
+.row-btn{
 display:flex;
-align-items:center;
 gap:10px;
+}
+.row-btn a{
+flex:1;
+text-align:center;
+padding:12px;
+border-radius:25px;
+color:white;
+text-decoration:none;
 }
 
-/* GALLERY */
-.gallery{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-padding:15px;
+/* BOOK SMALL */
+.book-small{
+display:block;
+text-align:center;
+margin-top:10px;
+font-size:13px;
+color:white;
+background:black;
+padding:10px;
+border-radius:20px;
+text-decoration:none;
 }
+
+/* CARD */
+.card{
+background:white;margin:15px;border-radius:20px;padding:20px;
+}
+
+/* GALLERY (VERTICAL) */
 .gallery img{
 width:100%;
-border-radius:10px;
+margin-bottom:15px;
+border-radius:15px;
 }
 
 /* FLOAT */
 .float{
-position:fixed;right:15px;bottom:20px;display:flex;flex-direction:column;gap:10px;
+position:fixed;right:15px;bottom:20px;
+display:flex;flex-direction:column;gap:10px;
 }
 .float a{
-width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-color:white;font-size:22px;text-decoration:none;
-}
-
-/* FAQ */
-.faq{
-margin:15px;
-}
-.faq-item{
-background:white;margin-bottom:10px;border-radius:10px;padding:15px;
+width:55px;height:55px;border-radius:50%;
+display:flex;align-items:center;justify-content:center;
+color:white;font-size:20px;text-decoration:none;
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <header>Rambagicha Guest House</header>
@@ -121,11 +115,8 @@ background:white;margin-bottom:10px;border-radius:10px;padding:15px;
 <!-- HERO -->
 <div class="hero">
 <h1>Welcome to Rambagicha</h1>
-<p>Comfort stay near temple</p>
-
 <a href="tel:918796085868" class="btn call">Call Now</a>
 <a href="https://wa.me/918796085868" class="btn whatsapp">Whatsapp</a>
-<a href="#" onclick="bookNow('General Booking')" class="btn book">Book Now</a>
 </div>
 
 <!-- ROOMS -->
@@ -143,11 +134,13 @@ background:white;margin-bottom:10px;border-radius:10px;padding:15px;
 <span>❄️ Non AC</span>
 </div>
 
-<div class="room-buttons">
+<div class="row-btn">
 <a href="tel:918796085868" class="call">Call Now</a>
 <a href="https://wa.me/918796085868" class="whatsapp">Whatsapp</a>
-<a href="#" onclick="bookNow('Non AC Room')" class="book">Book Now</a>
 </div>
+
+<a href="#" onclick="bookNow('Non AC Room')" class="book-small">book now</a>
+
 </div>
 
 <div class="room">
@@ -162,18 +155,20 @@ background:white;margin-bottom:10px;border-radius:10px;padding:15px;
 <span>❄️ AC</span>
 </div>
 
-<div class="room-buttons">
+<div class="row-btn">
 <a href="tel:918796085868" class="call">Call Now</a>
 <a href="https://wa.me/918796085868" class="whatsapp">Whatsapp</a>
-<a href="#" onclick="bookNow('AC Room')" class="book">Book Now</a>
 </div>
+
+<a href="#" onclick="bookNow('AC Room')" class="book-small">book now</a>
+
 </div>
 
 </div>
 
 <!-- GALLERY -->
 <div class="card" id="gallery">
-<h2>Gallery</h2>
+<h2 style="text-align:center;">Gallery</h2>
 
 <div class="gallery">
 <img src="g1.jpg">
@@ -181,55 +176,22 @@ background:white;margin-bottom:10px;border-radius:10px;padding:15px;
 <img src="g3.jpg">
 <img src="g4.jpg">
 </div>
+
 </div>
 
 <!-- ABOUT -->
 <div class="card" id="about">
-<h2>About Rambagicha</h2>
+<h2 style="text-align:center;">About Rambagicha</h2>
 <p style="text-align:center;">
-Experience comfort, peace, and convenience near the temple.
-Perfect stay for families and pilgrims.
+Comfortable stay near temple for families and pilgrims.
 </p>
 </div>
 
-<!-- NEARBY -->
-<div class="card">
-<h2>Nearby Locations</h2>
-<ul>
-<li>🚆 1 km from Railway Station</li>
-<li>🚌 1.5 km from Bus Stand</li>
-<li>🏛 300 mtr from Local Temple</li>
-<li>🏖 500 mtr from Riverfront</li>
-<li>✈ 70 km from Airport</li>
-</ul>
-</div>
-
-<!-- ACTIVITIES -->
-<div class="card">
-<h2>Leisure Activities</h2>
-<ul>
-<li>🕉 Visit Nearby Temples</li>
-<li>🌳 Walk in Bagicha Garden</li>
-<li>🛍 Shop at Local Bazaar</li>
-<li>🌊 Enjoy Riverside Views</li>
-<li>🚶 Morning Yoga & Walks</li>
-</ul>
-</div>
-
 <!-- FAQ -->
-<div id="faq" class="faq">
+<div class="card" id="faq">
 <h2 style="text-align:center;">FAQ's</h2>
-
-<div class="faq-item">
-<b>Check-in / Check-out?</b>
-<p>Check-in 12 PM, Check-out 11 AM.</p>
-</div>
-
-<div class="faq-item">
-<b>Parking available?</b>
-<p>Yes, parking available.</p>
-</div>
-
+<p>Check-in 12 PM, Check-out 11 AM</p>
+<p>Parking available</p>
 </div>
 
 <!-- FLOAT -->
@@ -241,14 +203,7 @@ Perfect stay for families and pilgrims.
 <script>
 function bookNow(room){
 let name=prompt("Enter your name");
-let date=prompt("Enter check-in date");
-let guests=prompt("Number of guests");
-
-let msg=`Hello, I want to book ${room}
-Name: ${name}
-Date: ${date}
-Guests: ${guests}`;
-
+let msg=`Hello, I want to book ${room} Name:${name}`;
 window.open("https://wa.me/918796085868?text="+encodeURIComponent(msg));
 }
 </script>

@@ -439,12 +439,73 @@ Our rest house is designed to blend traditional warmth with modern comfort, ensu
   </div>
 </section>
 <!-- FAQ -->
-<div class="card" id="faq">
-<h2 style="text-align:center;">FAQ's</h2>
-<p>Check-in 12 PM | Check-out 11 AM</p>
-<p>Parking Available</p>
-<p>WiFi Available</p>
-</div>
+<section style="padding:20px;">
+
+  <h2 style="text-align:center;font-size:28px;">FAQ's</h2>
+  <div style="width:60px;height:4px;background:#3b82f6;margin:8px auto 20px;border-radius:5px;"></div>
+
+  <div class="faq">
+
+    <div class="faq-item">
+      <div class="faq-question">+ What are the check-in and check-out timings?</div>
+      <div class="faq-answer">
+        Check-in time is 12:00 PM, and check-out time is 11:00 AM.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">+ Does The Ram Bagicha Guest House offer parking facilities?</div>
+      <div class="faq-answer">
+        Yes, we provide secure parking for all guests.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">+ Is Wi-Fi available in the rooms?</div>
+      <div class="faq-answer">
+        Yes, free Wi-Fi is available in all rooms.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+.faq-item {
+  border:1px solid #ddd;
+  margin-bottom:10px;
+  border-radius:6px;
+}
+
+.faq-question {
+  padding:15px;
+  font-weight:bold;
+  cursor:pointer;
+  background:#f9f9f9;
+}
+
+.faq-answer {
+  display:none;
+  padding:15px;
+}
+</style>
+
+<script>
+document.querySelectorAll(".faq-question").forEach((q) => {
+  q.addEventListener("click", () => {
+    let ans = q.nextElementSibling;
+
+    if (ans.style.display === "block") {
+      ans.style.display = "none";
+      q.innerHTML = q.innerHTML.replace("−", "+");
+    } else {
+      ans.style.display = "block";
+      q.innerHTML = q.innerHTML.replace("+", "−");
+    }
+  });
+});
+</script>
 
 <!-- FLOAT -->
 <div class="float">
